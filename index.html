@@ -28,7 +28,10 @@
         url: 'http://127.0.0.1:8080/process_search',
         dataType: 'json'
       },
-      templateResult: function(e) { return e.name; },
+
+      templateResult: function(e) {
+      o = e.name + "(Score " + e.score + ")";
+      return o; },
       templateSelection: function(e) { return e.name; }
     });
   </script>
