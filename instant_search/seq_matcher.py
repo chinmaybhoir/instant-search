@@ -112,7 +112,7 @@ def score_aggregator(search_term, names_list):
         if score > 0.75 and len(search_term) > 0:
             closeness = len_closeness(search_term, names[index])
             # print("name:", name['name'], " closeness:", closeness)
-            name_instance['score'] = (score + closeness)/2
+            name_instance['score'] = ((score + closeness)/2) * 100
         scores.append(name_instance)
     # Sort the list according to scores
     scores_sorted = sorted(scores, key=lambda x: x['score'], reverse=True)
