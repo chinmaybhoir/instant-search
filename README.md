@@ -1,4 +1,4 @@
-## Autocomplete application with sequence matcher
+## Instant search autocomplete application with sequence matcher
 
 First install the required modules with
 
