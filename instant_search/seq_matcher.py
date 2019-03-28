@@ -104,9 +104,9 @@ def score_aggregator(search_term, names_list):
         index, score = max(enumerate([f_name_scores[i]['score'],
                                      m_name_scores[i]['score'],
                                      l_name_scores[i]['score']]), key=operator.itemgetter(1))
-        names = [names_list[i]['f_name'],
-                 names_list[i]['m_name'],
-                 names_list[i]['l_name']]
+        names = [name['f_name'],
+                 name['m_name'],
+                 name['l_name']]
         name_instance['score'] = score
         # If score > 0.75, take the length measure into account to compare score among top choices
         if score > 0.75 and len(search_term) > 0:
