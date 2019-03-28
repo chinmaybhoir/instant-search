@@ -8,7 +8,11 @@ import os
 from instant_search.seq_matcher import score_aggregator
 
 from flask import Flask, jsonify, request
+from flask_cors import CORS
+
 app = Flask(__name__)
+# Enable Cross-Origin Resource Sharing
+CORS(app)
 
 FILE = os.environ.get("FILE", "data/test_data_sample.csv")
 
